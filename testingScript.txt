@@ -1,0 +1,35 @@
+.help
+.read populate_program.txt
+add -r 120 "Please Please Me" "Beatles" 1963 "George Martin"
+add -r 121 "With The Beatles" "Beatles" 1963 "George Martin"
+add -r ? "Beatles For Sale 2" "Beatles" 1964 "George Martin"
+add -s 2004 "Boys" "Luther Dixon, Wes Farrell"
+add -s 2005 "Ask Me Why" "Paul McCartney, John Lennon"
+add -s 2006 "Please Please Me" "Paul McCartney, John Lennon"
+add -t 183 100 1182 1
+add -t 184 null 1004 1
+add -t ? 100 1005 1
+add -t ? null 1006 1
+add -u jdoe "John Doe"
+add -p jdoe "Winter Songs"
+add -l jdoe "Winter Songs" 126
+show tracks
+show recordings
+show recordings -r 100
+.log start
+.log start_output
+.log start_both
+show songs
+show songs -s 1004
+delete -r 101
+delete -u jdoe
+delete -u cindy -p "help"
+delete -u ajones -p driving -t 61
+delete -u gjones -p mysongs -t 23 -GLOBAL
+delete -t 178
+delete -s 1181
+//Comment
+.log stop
+.log show
+.log save log.txt
+.log clear
